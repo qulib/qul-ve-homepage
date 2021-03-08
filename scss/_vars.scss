@@ -43,12 +43,25 @@ $clr-filters-lighter: $clr-qul-yellow-lighter;
 $clr-quote: $queens-logo-red;
 
 /* Responsive Widths */
-$tablet: 750px;
-$desktop: 1200px;
+$tablet: 800px;
+$desktop: 1100px;
 
 /* Fonts */
 $font-main: "Open Sans", sans-serif;
 
+/* Mixins */
 @mixin debug {
   border: 1px solid red;
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
 }

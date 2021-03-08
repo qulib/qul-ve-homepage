@@ -12,8 +12,10 @@
 /* Other Usage */
 /* Responsive Widths */
 /* Fonts */
+/* Mixins */
 body {
   font-family: "Open Sans", sans-serif;
+  color: #231f20;
   margin: 0 auto; }
 
 header {
@@ -30,18 +32,35 @@ main section {
   padding: 2rem; }
   main section h2 {
     color: #002f5e;
-    font-size: 32px;
-    font-weight: 300; }
-  main section a.thumbnail img {
-    max-width: 400px; }
-  main section a.button {
-    background-color: #002f5e;
-    color: white;
-    text-decoration: none;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    max-width: 150px; }
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: 0; }
+  main section a.thumbnail {
+    text-align: center; }
+    main section a.thumbnail img {
+      max-width: 300px; }
+  main section article {
+    padding-right: 2rem; }
+    main section article a.button {
+      display: block;
+      background-color: #002f5e;
+      color: white;
+      text-decoration: none;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      max-width: 150px; }
+      main section article a.button:hover {
+        background-color: #003972; }
+  @media (min-width: 800px) {
+    main section {
+      grid-template-areas: "header header" "main image"; }
+      main section h2 {
+        grid-area: header; }
+      main section article {
+        grid-area: main; }
+      main section a.thumbnail {
+        grid-area: image; } }
 
 footer {
   display: grid;

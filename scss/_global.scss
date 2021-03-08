@@ -1,5 +1,6 @@
 body {
   font-family: $font-main;
+  color: $clr-text;
   margin: 0 auto;
   // @include debug;
 }
@@ -22,28 +23,63 @@ main {
   section {
     display: grid;
     padding: 2rem;
+    // @include debug;
 
     h2 {
       color: $queens-logo-blue;
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 300;
+      margin-top: 0;
     }
 
     a.thumbnail {
+      text-align: center;
       img {
-        max-width: 400px;
+        max-width: 300px;
       }
     }
 
-    a.button {
-      background-color: $queens-logo-blue;
-      color: white;
-      text-decoration: none;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      text-align: center;
-      max-width: 150px;
+    article {
+      padding-right: 2rem;
+
+      a.button {
+        display: block;
+        background-color: $queens-logo-blue;
+        color: white;
+        text-decoration: none;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        max-width: 150px;
+
+        &:hover {
+          background-color: lighten($queens-logo-blue, 4%);
+        }
+      }
     }
+
+    @include tablet {
+      // grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "header header"
+        "main image";
+
+      h2 {
+        grid-area: header;
+      }
+
+      article {
+        grid-area: main;
+      }
+
+      a.thumbnail {
+        // text-align: left;
+        grid-area: image;
+      }
+    }
+
+    // @include desktop {
+    // }
   }
 }
 
