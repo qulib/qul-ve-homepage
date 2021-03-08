@@ -1,0 +1,54 @@
+/*
+* Colours
+* Sass color functions: https://robots.thoughtbot.com/controlling-color-with-sass-color-functions
+*/
+
+/* From Queen's logo */
+$queens-logo-black: #231f20;
+$queens-logo-red: #b81237;
+$queens-logo-blue: #002f5e;
+$queens-logo-gold: #febe10;
+$queens-logo-purple: #662d91;
+
+/* Blues */
+$clr-qul-blue: #80999d;
+$clr-qul-light-blue: #d9e0e7;
+$clr-qul-lighter-blue: lighten($clr-qul-light-blue, 4%);
+$clr-qul-link-blue: #1d70ad;
+
+/* Reds */
+$clr-qul-red: $queens-logo-red;
+$clr-qul-red-lighter: lighten($clr-qul-red, 10%);
+$clr-qul-red-darker: darken($clr-qul-red, 10%);
+
+/* Yellows */
+$clr-qul-yellow: #fcc34c;
+$clr-qul-yellow-lighter: lighten($clr-qul-yellow, 10%);
+$clr-qul-yellow-darker: darken($queens-logo-gold, 10%);
+
+/* Grays */
+$clr-qul-gray: #8c8c8c;
+$clr-qul-gray-lighter: lighten($clr-qul-gray, 10%);
+$clr-qul-gray-darker: darken($clr-qul-gray, 20%);
+
+/* Text Pallete */
+$clr-text: $queens-logo-black;
+$clr-link: $clr-qul-link-blue;
+$clr-link-hover: $queens-logo-red;
+$clr-link-visited: $queens-logo-purple;
+
+/* Other Usage */
+$clr-filters: $clr-qul-yellow;
+$clr-filters-lighter: $clr-qul-yellow-lighter;
+$clr-quote: $queens-logo-red;
+
+/* Responsive Widths */
+$tablet: 750px;
+$desktop: 1200px;
+
+/* Fonts */
+$font-main: "Open Sans", sans-serif;
+
+@mixin debug {
+  border: 1px solid red;
+}

@@ -1,0 +1,59 @@
+body {
+  font-family: $font-main;
+  margin: 0 auto;
+  // @include debug;
+}
+
+header {
+  display: grid;
+  border-bottom: 1px solid $clr-qul-gray-lighter;
+
+  h1 {
+    display: none;
+  }
+
+  a {
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+main {
+  section {
+    display: grid;
+    padding: 2rem;
+
+    h2 {
+      color: $queens-logo-blue;
+      font-size: 32px;
+      font-weight: 300;
+    }
+
+    a.thumbnail {
+      img {
+        max-width: 400px;
+      }
+    }
+
+    a.button {
+      background-color: $queens-logo-blue;
+      color: white;
+      text-decoration: none;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      max-width: 150px;
+    }
+  }
+}
+
+footer {
+  display: grid;
+  border-top: 1px solid $clr-qul-gray-lighter;
+
+  a {
+    width: 200px;
+    justify-self: end;
+    padding: 2rem;
+  }
+}
