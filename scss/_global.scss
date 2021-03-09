@@ -1,8 +1,13 @@
 body {
   font-family: $font-main;
+  font-size: 90%;
   color: $clr-text;
   margin: 0 auto;
   // @include debug;
+  max-width: 1100px;
+  @include tablet {
+    font-size: 100%;
+  }
 }
 
 header {
@@ -27,7 +32,7 @@ main {
 
     h2 {
       color: $queens-logo-blue;
-      font-size: 28px;
+      font-size: 1.6em;
       font-weight: 300;
       margin-top: 0;
     }
@@ -59,7 +64,6 @@ main {
     }
 
     @include tablet {
-      // grid-template-columns: repeat(2, 1fr);
       grid-template-areas:
         "header header"
         "main image";
@@ -68,8 +72,16 @@ main {
         grid-area: header;
       }
 
+      a.thumbnail {
+        width: 300px;
+      }
+
       article {
         grid-area: main;
+
+        p {
+          margin-top: 0;
+        }
       }
 
       a.thumbnail {

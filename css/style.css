@@ -15,8 +15,13 @@
 /* Mixins */
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 90%;
   color: #231f20;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 1100px; }
+  @media (min-width: 800px) {
+    body {
+      font-size: 100%; } }
 
 header {
   display: grid;
@@ -32,7 +37,7 @@ main section {
   padding: 2rem; }
   main section h2 {
     color: #002f5e;
-    font-size: 28px;
+    font-size: 1.6em;
     font-weight: 300;
     margin-top: 0; }
   main section a.thumbnail {
@@ -57,8 +62,12 @@ main section {
       grid-template-areas: "header header" "main image"; }
       main section h2 {
         grid-area: header; }
+      main section a.thumbnail {
+        width: 300px; }
       main section article {
         grid-area: main; }
+        main section article p {
+          margin-top: 0; }
       main section a.thumbnail {
         grid-area: image; } }
 
